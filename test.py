@@ -74,7 +74,7 @@ n_epoch = 1000
 weights = train_weights(dataset, l_rate, n_epoch)
 
 testingSet = dataset[:-10]
-for epoch in range(testingSet):
+for epoch in range(len(testingSet)):
     actualPrediction = predict(testingSet[epoch], weights)
     prediction = 1.0 if actualPrediction >= 0.5 else 0.0
 
